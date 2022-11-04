@@ -1,10 +1,25 @@
+import java.util.Scanner;
+
 public class runner {
     public static void main(String[] args) {
-        WhileLoopFun fun = new WhileLoopFun();
-        System.out.println("-- test factorial --");
-        System.out.println(fun.factorial(6));
-        System.out.println(fun.factorial(10));
-        System.out.println(fun.factorial(20));
+        Scanner s = new Scanner(System.in);
+        int x = 0;
+        int max = x;
+        int min = x;
 
+        while(x != -1){
+            System.out.print("Enter a number (or -1 to quit): ");
+            x = s.nextInt();
+            max = x;
+            min = x;
+            if (x > max){
+                max = x;
+            }
+            if (x < min){
+                min = x;
+            }
+        }
+        System.out.println("max is: " + max);
+        System.out.println("min is: " + min);
     }
 }
